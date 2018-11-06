@@ -10,7 +10,7 @@ Then run `bin/rails server`, this command -should- put the store up and running 
 
 There will be many more updates to this project, and it's not exactly ground-breaking, but it's my first time working with Ruby and Rails.
 
-You can run the test suite by being in the depot directory and running `bin/rails test`!
+You can run the test suite by being in the depot directory and running `bin/rails test`.
 
 
 
