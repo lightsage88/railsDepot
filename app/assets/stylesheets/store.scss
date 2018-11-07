@@ -30,6 +30,22 @@
             .price {
                 font-size: 1.414em;
             }
+            form, div {
+                display: inline;
+            }
+            input[type="submit"] {
+                background-color: #022B3A;
+                border-radius: 0.354em;
+                border: solid thin #DD1C1A;
+                color: #06AED5;
+                font-family: Chrono Trigger, sans-serif;
+                font-size: 1em;
+                padding: 0.354em 1em;
+            }
+            input[type="submit"]:hover {
+                background-color: #F0C808;
+                color: #DD1C1A;
+            }
         }
     }
 }

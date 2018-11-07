@@ -90,3 +90,16 @@ img.mainStoreLogo {
 .side_nav_strong {
     color: white;   
 }
+
+.notice, #notice {
+    background: #022B3A;
+    border-radius: 0.5em;
+    border: solid 0.177em #f0c808;
+    color: #06Aed5;
+    font-weight: bold;
+    font-family: Chrono Trigger, sans-serif;
+    font-size: 2em;
+    margin-bottom: 1em;
+    padding: 1em 1.414em;
+    text-align: center;
+}

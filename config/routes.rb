@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :line_items
+  resources :carts
   root 'store#index', as: 'store_index'
 =begin The line above starting with as: sets things up so that our
  existing tests will continue to pass because store_controller_test.rb has a testblock
