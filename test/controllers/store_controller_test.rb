@@ -9,6 +9,9 @@ class StoreControllerTest < ActionDispatch::IntegrationTest
     assert_select 'h2', 'Spider-Man'
     assert_select 'h2', 'Super Smash Bros Ultimate Nintendo Switch Bundle'
     assert_select '.price', /\$[,\d]+\.\d\d/
+    assert_select 'aside', 'Buy something, will ya?'
   end
+
+ 
 
 end
