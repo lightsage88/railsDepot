@@ -39,10 +39,17 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy cart" do
+    ##first we're going to post the creation of an item
+    post line_items_url, params: { product_id: products(:three).id }
+    @cart = Cart.find(session[:cart_id])
+
+    #Below we assert that there will be a difference
+    #in the count attribute of the cart after we 'do'
+    #the underlying procedure of deleting/destroying the cart
     assert_difference('Cart.count', -1) do
       delete cart_url(@cart)
     end
-
-    assert_redirected_to carts_url
+    #in Ch.10 pg 144, we redirected instead to store_index_url
+    assert_redirected_to store_index_url
   end
 end
