@@ -12,6 +12,11 @@
     <header class='main'>
       <%= image_tag 'logo.png', alt: "Adrian's WikiRoR Store", class: "mainStoreLogo" %>
       <h1><%= @page_title %></h1>
+        <% if @counter && @counter >= 5 %>
+        <aside class='sassyAside'>You've been here <%= pluralize(@counter, 'time', 'times')%> and haven't put anything in your cart. What gives?</aside>
+        <% else %>
+        <aside class='sassyAside'>Buy something, will ya?</aside>
+        <% end %>
     </header>
     <section class='content'>
       <nav class='side_nav'>
