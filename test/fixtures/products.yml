@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: Programming Ruby 1.9
   description: MyText
   image_url: ssbundle.png
   price: 9.99
 
 two:
-  title: MyString
+  title: Super Smash Bros Ultimate Nintendo Switch Bundle
   description: MyText
   image_url: ssbundle.png
   price: 9.99
 
 three: 
-  title: SpiderMan
+  title: Spider-Man
   description: Experience a brand-new and authentic Spider-Man adventure 
         with a fully customized Amazing Red PS4 Pro console 
         featuring the Spider icon, DUALSHOCK®4 wireless controller, 

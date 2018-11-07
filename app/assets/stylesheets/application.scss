@@ -73,7 +73,6 @@ img.mainStoreLogo {
                     color: #FBFFFE;
                     text-decoration: none;
                     font-family: Chrono Trigger, sans-serif;
-                    font-size: 1.7em;
                 }
                 a:hover {
                     background: none;
@@ -84,5 +83,10 @@ img.mainStoreLogo {
     }
     main {
         padding: 0.5em;
+
     }
+}
+
+.side_nav_strong {
+    color: white;   
 }

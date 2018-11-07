@@ -15,9 +15,9 @@
   <%= image_tag(@product.image_url, class: "productPageImage") %>
 </img>
 
-<p>
+<p class="price">
   <strong>Price:</strong>
-  <%= @product.price %>
+  <%= number_to_currency(@product.price) %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
