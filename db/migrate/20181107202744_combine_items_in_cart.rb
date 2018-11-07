@@ -14,6 +14,7 @@ class CombineItemsInCart < ActiveRecord::Migration[5.1]
           item.quantity = quantity
           item.save!
         end
+      end
     end
   end
 end
