@@ -16,4 +16,17 @@ class Cart < ApplicationRecord
         end
         current_item
     end
+
+    def total_price
+        #get the line items into an array then use the
+        #sum helper method to add them all together with the line_items
+        #total_price method that you wrote a bit ago
+        line_items.to_a.sum do |item|
+            item.total_price
+            #the above makes each |item| which is really a line_item
+            #call upon its total_price method which multiples the 
+            # quantity of the item by the 
+                #item's product price
+        end
+    end
 end

@@ -20,8 +20,8 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
       post line_items_url, params: { product_id: products(:three).id }
     end
     follow_redirect!
-    assert_select 'h2', 'Your Pragmatic Cart'
-    assert_select 'li', "1 \u00D7 Spider-Man"
+    assert_select 'h2', 'Your Cart'
+    assert_select 'td', "Spider-Man"
 
   end
 
