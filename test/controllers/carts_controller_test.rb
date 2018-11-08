@@ -38,6 +38,15 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to cart_url(@cart)
   end
 
+  # test "should have 1 item quantity of two" do
+  #   post line_items_url, params: { product_id: products(:two).id}
+  #   @cart = Cart.find(session[:cart_id])
+  #   puts "This is the cart: #{@cart}"
+  #   puts @cart.
+  # end
+  #TODO: I can't figure out how to test unique products and duplicate products to a cart
+  
+
   test "should destroy cart" do
     ##first we're going to post the creation of an item
     post line_items_url, params: { product_id: products(:three).id }

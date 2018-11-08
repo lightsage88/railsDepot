@@ -61,8 +61,9 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
+      format.html { redirect_to @line_item.cart, notice: "#{@line_item.product.title} was removed." }
       format.json { head :no_content }
+      #ToDO: Remember to make sure you include the double quotes or else you cant reference scoped variables, derp;
     end
   end
 
@@ -76,4 +77,5 @@ class LineItemsController < ApplicationController
     def line_item_params
       params.require(:line_item).permit(:product_id)
     end
+
 end
