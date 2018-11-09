@@ -33,7 +33,15 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart, notice: "You have added #{product.title} to your basket!" }
+        format.html { redirect_to store_index_url, notice: "You have added #{product.title} to your basket!" }
+        format.js   { @ganzoko = @line_item }
+        #We are passing in parameters of sorts in these brackets, to help us
+        #determine animation assignment, we make a @ganzoko up out of our imaginations and tell him
+        #that he is @line_item. He thinks that's pretty neat, we let him loose on the wild
+        #knowing that he has access to all things line_item related...at least I think so.
+        #he creeps his way to the _line_item.html.erb PARTIAL where we set up an if/else statement
+        #saying that if the 'line_item' about to be processed refers to him (and it can only be oneat a time)
+        #he flashes yellow!
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }

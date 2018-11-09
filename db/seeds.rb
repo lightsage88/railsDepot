@@ -40,5 +40,5 @@ Product.create!(title: "Limited Edition Spider-Man PS4 Pro Bundle",
         upon his shoulders.
         </p>},
     image_url: 'spiderbundle.jpg',
-    price: 699.95)
+    price: 9.95)
 #...

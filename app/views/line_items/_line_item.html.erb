@@ -1,0 +1,17 @@
+<% if line_item == @ganzoko %> 
+ <tr class='line-item-highlight'>
+<% else %>
+ <tr>
+<% end %>
+        <td class='quantity'><%= line_item.quantity %></td>
+        <td><%= line_item.product.title %></td>
+        <!--The above line is made possible by the fact that line_item references/belongs_to both cart and product, you can see this relationship in the schema.rb file and in models/line_item.rb!!!!-->
+        <td class='price'><%= number_to_currency(line_item.total_price) %></td>
+        <!--To make the above work, as you may have guessed while typing it, you need to set up the line_item model to make a total_price key with a value because there isn't one currently-->
+        <!--Now I like to be fancy, so I'm going to try finagling the image onto a table data cell, I just feel like it. -->
+        <td class='cartProductImage'><%= image_tag(line_item.product.image_url) %></td>
+        <td><%= button_to 'Remove Item', line_item, method: :delete,
+        
+    data: {confirm: 'You really want to remove this?'} %></td>
+    </tr>
+    

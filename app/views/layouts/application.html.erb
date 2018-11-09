@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head id='headYo'>
     <title>Adrian's WikiRoR Store</title>
     <%= csrf_meta_tags %>
 
@@ -20,6 +20,18 @@
     </header>
     <section class='content'>
       <nav class='side_nav'>
+      <% if @cart %>
+      <div id='cart' class='carts'>
+        <%# <%= render_if @cart && @cart.line_items.any?, @cart %> %>
+        <%# <%=render @cart %> %>
+        <!-- Here we are drawing upon our custom made helper method
+        which we wrote in app/helpers/application_helper it takes a 
+        condition [that @cart exists and that it also has something
+        in the way of line_items AND the record of @cart [the instance 
+        variable of cart-->
+        <%= render @cart %>
+      </div>
+      <% end %>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/questions">Questions</a></li>
